@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="419"
+    android:versionName="0.4.19"
+    android:compileSdkVersion="23"
+    android:compileSdkVersionCodename="6.0-2438415"
+    package="cu.uci.android.apklis"
+    platformBuildVersionCode="23"
+    platformBuildVersionName="6.0-2438415">
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.Ad_ID"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="25.3.1"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_apklis"
+        android:name="cu.uci.android.apklis.MainApp"
+        android:debuggable="true"
+        android:configChanges="screenSize|orientation"
+        android:allowBackup="true"
+        android:largeHeap="true"
+        android:supportsRtl="true">
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="204567107"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:mimeType="*/*"
+                    android:scheme="file"
+                    android:host="www.apklis.cu"
+                    android:pathPattern=".*\\.apklis"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.HomeActivity"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/WelcomeScreenTheme"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.InitialSplashActivity"
+            android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.AppDetailsActivity"
+            android:configChanges="screenSize|orientation"/>
+        <activity
+            android:theme="@style/AppDialogTheme"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.ScreenshotDialog"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_my_account"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.AccountActivity"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.AppListActivity">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="www.play.google.com"
+                    android:pathPrefix="/store"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="www.apklis.cu"
+                    android:pathPrefix="/es/application"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="www.apklis.cu"
+                    android:pathPrefix="/en/application"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="www.apklis.cu"
+                    android:pathPrefix="/application"/>
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="play.google.com"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_info"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.InfoActivity"/>
+        <service
+            android:name="cu.uci.android.apklis.device.AuthenticationService"
+            android:exported="false"
+            android:process=":auth">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator"/>
+        </service>
+        <service
+            android:name="cu.uci.android.apklis.device.Service.ServiceReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="cu.uci.android.apklis.device.Service.ServiceDownload"
+            android:exported="true"/>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <activity android:name="cu.uci.android.apklis.presentation.ui.activity.PermissionActivity"/>
+        <receiver android:name="cu.uci.android.apklis.device.Service.connectivityDetectorReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.ProfileActivity"/>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_config"
+            android:name="cu.uci.android.apklis.presentation.ui.activity.SettingActivity"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:exported="false"
+            android:authorities="cu.uci.android.apklis.provider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/nnf_provider_paths"/>
+        </provider>
+        <activity
+            android:theme="@style/FilePickerTheme"
+            android:label="@string/app_name"
+            android:name="com.nononsenseapps.filepicker.FilePickerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.GET_CONTENT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:label="Apklis instalación automática"
+            android:name="cu.uci.android.apklis.device.Service.SilentInstallAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config"/>
+        </service>
+        <activity android:name="cu.uci.android.apklis.presentation.ui.activity.BuyAppActivity">
+            <intent-filter>
+                <action android:name="com.transfer.mytransfer.ANOTHER_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cu.uci.android.apklis.presentation.ui.activity.XapklisActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:mimeType="*/*"
+                    android:scheme="file"
+                    android:host="www.apklis.cu"
+                    android:pathPattern=".*\\.apklis"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="cu.uci.android.apklis.ScreenshotViewActivity"/>
+        <activity android:name="cu.uci.android.apklis.presentation.ui.activity.WishListActivity"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Translucent"
+            android:name="com.example.permissionrequest.PermissionRequestActivity"
+            android:launchMode="singleInstance"/>
+        <service
+            android:name="net.gotev.uploadservice.UploadService"
+            android:enabled="true"
+            android:exported="true"/>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="cu.uci.android.apklis.com.squareup.picasso"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="cu.uci.android.apklis.firebaseinitprovider"
+            android:initOrder="100"/>
+        <service android:name="com.liulishuo.filedownloader.services.FileDownloadService.SharedMainProcessService"/>
+        <service
+            android:name="com.liulishuo.filedownloader.services.FileDownloadService.SeparateProcessService"
+            android:process=":filedownloader"/>
+        <receiver
+            android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.startapp.sdk.adsbase.StartAppInitProvider"
+            android:exported="false"
+            android:authorities="cu.uci.android.apklis.startappinitprovider"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.startapp.sdk.adsbase.consent.ConsentActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"/>
+        <activity
+            android:theme="@android:style/Theme"
+            android:name="com.startapp.sdk.ads.list3d.List3DActivity"/>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.startapp.sdk.ads.interstitials.OverlayActivity"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"/>
+        <service android:name="com.startapp.sdk.cachedservice.BackgroundService"/>
+        <service
+            android:name="com.startapp.sdk.jobs.SchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+    </application>
+</manifest>

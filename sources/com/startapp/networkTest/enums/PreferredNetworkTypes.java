@@ -1,0 +1,41 @@
+package com.startapp.networkTest.enums;
+
+/* compiled from: StartAppSDK */
+/* loaded from: classes3.dex */
+public enum PreferredNetworkTypes {
+    Unknown,
+    WCDMA_PREF,
+    GSM_ONLY,
+    WCDMA_ONLY,
+    GSM_UMTS,
+    CDMA,
+    CDMA_NO_EVDO,
+    EVDO_NO_CDMA,
+    GLOBAL,
+    LTE_CDMA_EVDO,
+    LTE_GSM_WCDMA,
+    LTE_CDMA_EVDO_GSM_WCDMA,
+    LTE_ONLY,
+    LTE_WCDMA,
+    TDSCDMA_ONLY,
+    TDSCDMA_WCDMA,
+    LTE_TDSCDMA,
+    TDSCDMA_GSM,
+    LTE_TDSCDMA_GSM,
+    TDSCDMA_GSM_WCDMA,
+    LTE_TDSCDMA_WCDMA,
+    LTE_TDSCDMA_GSM_WCDMA,
+    TDSCDMA_CDMA_EVDO_GSM_WCDMA,
+    LTE_TDSCDMA_CDMA_EVDO_GSM_WCDMA,
+    NR_ONLY,
+    NR_LTE,
+    NR_LTE_CDMA_EVDO,
+    NR_LTE_GSM_WCDMA,
+    NR_LTE_CDMA_EVDO_GSM_WCDMA,
+    NR_LTE_WCDMA,
+    NR_LTE_TDSCDMA,
+    NR_LTE_TDSCDMA_GSM,
+    NR_LTE_TDSCDMA_WCDMA,
+    NR_LTE_TDSCDMA_GSM_WCDMA,
+    NR_LTE_TDSCDMA_CDMA_EVDO_GSM_WCDMA
+}

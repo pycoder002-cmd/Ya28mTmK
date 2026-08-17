@@ -1,0 +1,25 @@
+package io.swagger.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
+@Retention(RetentionPolicy.RUNTIME)
+/* loaded from: classes.dex */
+public @interface ApiParam {
+    String access() default "";
+
+    boolean allowMultiple() default false;
+
+    String allowableValues() default "";
+
+    String defaultValue() default "";
+
+    String name() default "";
+
+    boolean required() default false;
+
+    String value() default "";
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/wel_root"
+    android:background="@color/wel_transparent"
+    android:fitsSystemWindows="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.stephentuso.welcome.WelcomeBackgroundView
+        android:id="@+id/wel_background_view"
+        android:background="#ff2c809f"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:fitsSystemWindows="?attr/welcomeLayoutFitsSystemWindows"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/wel_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <View
+            android:layout_width="match_parent"
+            style="?attr/welcomeDividerStyle"/>
+        <FrameLayout
+            android:id="@+id/wel_bottom_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <com.startapp.sdk.ads.banner.Banner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+</FrameLayout>
